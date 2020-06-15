@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Manager</title>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <body>
+    <section class="privacy-manager">
+      <div class="pm-wrap">
+        <h2 class="pm-heading">Privacy Manager</h2>
+
+        <form class="pm-form" id="privacy-manager">
+          <!-- Mandatory Functional cookies -->
+          <div>
+            <label for="functional">Functional</label>
+            <input type="checkbox" name="functional" checked />
+          </div>
+
+          <!-- Mandatory Analytical cookies -->
+          <div>
+            <label for="analytical">Analytical</label>
+            <input type="checkbox" name="analytical" checked />
+          </div>
+
+          <!-- Targeting cookies -->
+          <div>
+            <label for="targeting">Targeting</label>
+            <input type="checkbox" name="targeting" />
+          </div>
+
+          <input type="submit" value="Update preferences" />
+
+          <button class="restore">Restore defaults</button>
+        </form>
+      </div>
+    </section>
+    <script src="./PrivacyManager.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
