@@ -1,5 +1,19 @@
 # Privacy Manager
+<!-- TOC -->
 
+- [Privacy Manager](#privacy-manager)
+  - [Cookie vs web storage?](#cookie-vs-web-storage)
+    - [Cookie](#cookie)
+    - [Web storage ( local storage )](#web-storage--local-storage-)
+  - [Approach](#approach)
+  - [Setup](#setup)
+  - [Methods](#methods)
+    - ["on"](#on)
+    - [Item specific methods](#item-specific-methods)
+  - [Configuration object](#configuration-object)
+  - [Server side Extra](#server-side-extra)
+
+<!-- /TOC -->
 Privacy manager is a plugin that allows to control **[cookies](https://en.wikipedia.org/wiki/HTTP_cookie)** or **[web storage](https://en.wikipedia.org/wiki/Web_storage)** data on client browser to ensure functionality of the site or enhance user experience.
 
 ## Cookie vs web storage?
@@ -9,7 +23,7 @@ Privacy Manager plugin allows us to choose which option to use. Cookie or web st
 ### Cookie
 
 - Cookie information is sent to server via headers
-- Cookie with _HttpOnly_ flag are not available in Javascript, thus is immune to XSS attackes (CSRF still applies)
+- Cookie with _HttpOnly_ flag are not available in Javascript, thus is immune to XSS attacks (CSRF still applies)
 - Cookie can have expiry.
 - All cookies are stored in single string
 
@@ -175,7 +189,7 @@ restore.addEventListener('click', privacyManager.restoreDefaults, false);
 
 Items, beside name and default value, accept methods to be executed in different scenarios.
 
-Each item in **items** can have upto 3 hook methods :
+Each item in **items** can have  up to 3 hook methods :
 
 - **onApprove** - executed if checkbox is checked.
 - **onDeny** - executed if checkbox is un checked
@@ -324,7 +338,7 @@ Full function
  *  Intended to be used along with PrivacyManager JS plugin
  *  var_dump(getPrivacyPref('functional'));
  *  Two named arguments.
- *  $name - name of the cookie or cookiee group in question. Matches input field name in Privacy Manager HTML
+ *  $name - name of the cookie or cookie group in question. Matches input field name in Privacy Manager HTML
  *  $cookie - cookie name in browser. Defaults : 'privacy-preferences'. This should match with the one set in Privacy Manger.
  *
  *  Returns '' (empty string) if no key/preference is found within cookie or boolean. true - (cookie) approved, false - (cookie) denied.
