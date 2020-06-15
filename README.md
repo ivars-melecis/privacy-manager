@@ -1,4 +1,5 @@
 # Privacy Manager
+
 <!-- TOC -->
 
 - [Privacy Manager](#privacy-manager)
@@ -14,11 +15,12 @@
   - [Server side Extra](#server-side-extra)
 
 <!-- /TOC -->
+
 Privacy manager is a plugin that allows to control **[cookies](https://en.wikipedia.org/wiki/HTTP_cookie)** or **[web storage](https://en.wikipedia.org/wiki/Web_storage)** data on client browser to ensure functionality of the site or enhance user experience.
 
 ## Cookie vs web storage?
 
-Privacy Manager plugin allows us to choose which option to use. Cookie or web storage. This is due to their differences. Suh as those listed below:
+Privacy Manager plugin allows us to choose which option to use. Cookie or web storage. This is due to their differences. Such as those listed below:
 
 ### Cookie
 
@@ -44,7 +46,7 @@ Stored cookie:
 
 ![cookie-sample](./images/cookie-sample.png)
 
-Saved Web storage:
+Saved web storage:
 
 ![web-sample](./images/web-storage-sample.png)
 
@@ -189,7 +191,7 @@ restore.addEventListener('click', privacyManager.restoreDefaults, false);
 
 Items, beside name and default value, accept methods to be executed in different scenarios.
 
-Each item in **items** can have  up to 3 hook methods :
+Each item in **items** can have up to 3 hook methods :
 
 - **onApprove** - executed if checkbox is checked.
 - **onDeny** - executed if checkbox is un checked
@@ -317,10 +319,10 @@ Example in code :
 ```php
 
 <?php
-  $acceptAnalytics = getPrivacyPref('widget-x') ?: false;
+  $acceptWidgetX = getPrivacyPref('widget-x') ?: false;
 ?>
 
-<?php if($acceptAnalytics) : ?>
+<?php if($acceptWidgetX) : ?>
 
   <div class="widget-x">
     // Loading widget X
